@@ -1,0 +1,26 @@
+// https://devfacts.com/media-queries-breakpoints-2021/#:~:text=development%20from%20scratch-,Using%20min-width,-//%20Small%20devices%20(landscape
+
+// Small devices (landscape phones, 576px and up)
+@mixin for-phone-land-up {
+	@media screen and (max-width: 599px) {
+		@content;
+	}
+}
+// Medium devices (tablets, 768px and up)
+@mixin for-tablet-up {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+// Large devices (desktops, 992px and up)
+@mixin for-desktop-up {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+// Extra large devices (large desktops, 1200px and up)
+@mixin for-large-desktop-up {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}

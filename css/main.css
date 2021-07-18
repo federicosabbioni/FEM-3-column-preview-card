@@ -1,0 +1,110 @@
+:root {
+  --clr-pr-bright-orange: hsl(31, 77%, 52%);
+  --clr-pr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-pr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-neut-tranparent-white:hsla(0, 0%, 100%, 0.75);
+  --clr-neut-very-light-gray: hsl(0, 0%, 95%);
+  --ff-main: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-neut-very-light-gray);
+  font-family: var(--ff-main);
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 65%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+.card {
+  --br-rad-card: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  background: var(--card-color);
+}
+.card img {
+  margin-top: 20px;
+}
+.card h2 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--clr-neut-very-light-gray);
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.card p {
+  color: var(--clr-neut-tranparent-white);
+}
+.card.sedan {
+  --card-color: var(--clr-pr-bright-orange);
+}
+.card.suv {
+  --card-color: var(--clr-pr-dark-cyan);
+}
+.card.luxury {
+  --card-color: var(--clr-pr-very-dark-cyan);
+}
+.card:first-child {
+  border-radius: var(--br-rad-card) var(--br-rad-card) 0 0;
+}
+@media screen and (min-width: 992px) {
+  .card:first-child {
+    border-radius: var(--br-rad-card) 0 0 var(--br-rad-card);
+  }
+}
+.card:last-child {
+  border-radius: 0 0 var(--br-rad-card) var(--br-rad-card);
+}
+@media screen and (min-width: 992px) {
+  .card:last-child {
+    border-radius: 0 var(--br-rad-card) var(--br-rad-card) 0;
+  }
+}
+.card .cta {
+  margin-top: 2.7rem;
+  padding: 10px 20px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--clr-neut-very-light-gray);
+  color: var(--card-color);
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+}
+.card .cta:hover {
+  background-color: transparent;
+  color: var(--clr-neut-tranparent-white);
+  border-color: var(--clr-neut-very-light-gray);
+}/*# sourceMappingURL=main.css.map */
